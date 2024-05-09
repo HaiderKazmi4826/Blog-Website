@@ -64,6 +64,31 @@ address {
   font-style: normal;
 }
 
+.header-scrolled {
+  box-shadow: rgba(63, 63, 63, 0.3) 0px 2px 8px 0px;
+}
+
+.fancy-border {
+  border: 3px solid;
+  -o-border-image: linear-gradient(115deg, #4fcf70, #fad648, #a767e5, #12bcfe, #44ce7b);
+     border-image: linear-gradient(115deg, #4fcf70, #fad648, #a767e5, #12bcfe, #44ce7b);
+  border-image-slice: 1;
+  background-color: transparent;
+}
+
+.section-title {
+  @apply text-md text-light-color font-black relative mb-[60px] w-full;
+  position: relative;
+}
+.section-title::after {
+  content: attr(data-text);
+  position: absolute;
+  bottom: -20px;
+  left: 18px;
+  display: block;
+  @apply text-light-color opacity-10 uppercase z-[-1];
+}
+
 @keyframes menuToggleOpen {
   0% {
     opacity: 0;
@@ -86,4 +111,38 @@ address {
 }
 .anim-menuToggleOpen {
   animation: menuToggleOpen 1s linear;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  @apply bg-secondary-background-color;
+  width: 25px !important;
+  height: 25px !important;
+}
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 1.4rem !important;
+  font-weight: 900;
+  @apply text-light-color;
+}
+
+.swiper-pagination {
+  transform: translateY(30%) !important;
+}
+
+.swiper-pagination-bullet {
+  border-radius: 100% !important;
+  background-color: #3d3d3d !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #fff !important;
+}
+
+body.light .swiper-pagination-bullet-active {
+  background-color: #3d3d3d !important;
+}
+
+.activeLink {
+  @apply text-light-color;
 }/*# sourceMappingURL=App.css.map */

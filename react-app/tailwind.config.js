@@ -18,13 +18,14 @@ export default {
     extend: {
       colors: {
         "light-color": "var(--light-color)",
+        "pagination-color": "var(--pagination-color)",
         "light-color-alt": "var(--light-color-alt)",
         "primary-background-color": "var(--primary-background-color)",
         "secondary-background-color": "var(--secondary-background-color)",
         "hover-light-color": "var(--hover-light-color)",
         "hover-dark-color": "var(--hover-dark-color)",
-        "transparent-light-color": "rgba(255,255,255,.05)",
-        "transparent-dark-color": "rgba(0,0,0,.75)",
+        "transparent-light-color": "rgb(var(--transparent-light-color) / <0.05>)",
+        "transparent-dark-color": "#000000bf",
         "gradient-color":
           "linear-gradient(115deg,#4fcf70,#fad648,#a767e5,#12bcfe,#44ce7b)",
       },
@@ -35,8 +36,15 @@ export default {
       animation: {
         'menuToggleOpen': 'menuToggleOpen 1s linear',
         'menuToggleClose': 'menuToggleClose 1s linear',
+      },
+      gridTemplateColumns: {
+        'features': '70% auto',
+      },
+      gridTemplateRows: {
+        'features': '50px 1fr 1fr',
       }
     },
   },
   plugins: [],
 };
+
